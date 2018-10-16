@@ -1,0 +1,48 @@
+.treeview ul
+, .treeview li {
+  padding: 0;
+  margin: 0 0 0 16px;
+  list-style: none;
+	position:relative;
+}
+
+/* hide all ul inside any input: close all lists*/
+.treeview input ~ ul {
+  display: none;
+}
+
+/* show all ul contained in a checked checkbox */
+.treeview input:checked ~ ul {
+  display: block;
+}
+
+/* let more space between a label and the preceding input */
+.treeview input + label {
+	margin: 0 0 0 15px; /* top rigth bottom left */
+}
+
+/* make the check-box inivisible */
+.treeview input {
+  /* position: absolute; */ /* text of check-boxes to the left */
+  opacity: 0.1; /* hide the check-boxes */
+}
+
+/* 'opened_folder' icon for labels preceded with a checked checkbox */
+.treeview input:checked + label {
+  background: url("../images/opened_folder.png") no-repeat;	
+}
+
+/* 'closed_folder' icon for labels preceded with a not-checked checkbox */
+.treeview input:not(:checked)+ label {
+  background: url("../images/closed_folder.png") no-repeat;	
+}
+
+/* make the check-box inivisible */
+.treeview input {
+  position: absolute;  /* text of check-boxes to the left */
+  opacity: 0.1; /* hide the check-boxes */
+}
+
+
+
+

@@ -1,0 +1,85 @@
+.treeview ul
+/* , .treeview li */
+  {
+  padding: 0;
+  margin: 0 0 0 16px;
+  list-style: none;
+  position:relative;
+}
+
+.treeview input {
+  position: absolute; /* text of check-boxes to the left */
+  opacity: 0; /* hide the check-boxes */
+}
+
+/* Every ul preceded immediately with a label, which in turn is preceded immediately with an input */
+.treeview input + label + ul {
+	margin: 0 0 0 25px; /* distance between the tree-branches*/
+}
+
+/* hide all ul inside any input: close all lists*/
+.treeview input ~ ul {
+  display: none;
+}
+
+/* show all ul contained in a checked checkbox */
+.treeview input:checked ~ ul {
+  display: block;
+}
+
+/* 'opened_folder' icon for labels preceded with a checked checkbox */
+.treeview input:checked + label {
+  background: url("../images/opened_folder.png") no-repeat;	
+  background-position-y: top 5px;
+}
+
+/* 'closed_folder' icon for labels preceded with a not-checked checkbox */
+.treeview input:not(:checked)+ label {
+  background: url("../images/closed_folder.png") no-repeat;	
+  background-position-y: top 5px;
+}
+
+.treeview label::before {
+	content: ""; /* very important: make the content empty */		
+	/* border: 1px solid red; */
+	margin: 0 20px 0 0;  /* top right bottom left*/
+}
+
+.treeview ul:before {
+  content:"";
+  display:block;
+  width:0;
+  position:absolute;
+  top:-10px;
+  bottom:0;
+  left:0;
+  border-left:3px solid
+}
+
+.treeview li {	
+  margin:0;
+  padding:0 1em;
+  line-height:2em;
+  color:#369;
+  font-weight:700;
+  position:relative
+}
+
+.treeview ul li:before {
+  content:"";
+  display:block;
+  width:10px;
+  height:0;
+  border-top:3px solid;
+  margin-top:-1px;
+  position:absolute;
+  top:1em;
+  left:0
+}
+
+.treeview ul li:last-child:before {
+  background:#fff;
+  height:auto;
+  /* top:1em; */
+  bottom:0
+}

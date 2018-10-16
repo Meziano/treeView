@@ -1,0 +1,22 @@
+.treeview ul
+, .treeview li {
+  padding: 0;
+  margin: 0 0 0 16px;
+  list-style: none;
+	position:relative;
+}
+
+.treeview input + label {
+	margin: 0 0 0 15px; /* distance between the tree-branches*/
+}
+
+
+/* hide all ul inside any input: close all lists*/
+.treeview input ~ ul {
+  display: none;
+}
+
+/* show all ul contained in a checked checkbox */
+.treeview input:checked ~ ul {
+  display: block;
+}

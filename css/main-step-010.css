@@ -1,0 +1,125 @@
+.treeview ul
+, .treeview li {
+  padding: 0;
+  margin: 0 0 0 16px;
+  list-style: none;
+  position:relative;
+}
+
+/* hide all ul inside any input: close all lists*/
+.treeview input ~ ul {
+  display: none;
+}
+
+/* show all ul contained in a checked checkbox */
+.treeview input:checked ~ ul {
+  display: block;
+}
+
+/* let more space between a label and the preceding input */
+.treeview input + label  +ul{
+	margin: 0 0 0 15px; /* top rigth bottom left */
+}  /* not necessary*/
+
+/* make the check-box inivisible */
+.treeview input {
+  /* position: absolute; */ /* text of check-boxes to the left */
+  opacity: 0.1; /* hide the check-boxes */
+}
+
+/* 'opened_folder' icon for labels preceded with a checked checkbox */
+.treeview input:checked + label {
+  background: url("../images/opened_folder.png") no-repeat;	
+}
+
+/* 'closed_folder' icon for labels preceded with a not-checked checkbox */
+.treeview input:not(:checked)+ label {
+  background: url("../images/closed_folder.png") no-repeat;
+  background-color: pink;
+  background-position-y: top 5px;
+}
+
+/* make the check-box inivisible */
+.treeview input {
+  position: absolute;  /* text of check-boxes to the left */
+  opacity: 0.4; /* hide the check-boxes */
+  /* border: 1px solid blue; */
+}
+
+.treeview label::before {
+	content: ""; /* very important: make the content empty */		
+	/* border: 1px solid red; */
+	margin: 0 20px 0 0;  /* top right bottom left*/	
+}
+
+/* make the left border (the whole high) of every ul::before visible  */
+.treeview ul::before {
+  content:"";
+   display:block; /* default: static */
+  /*width:0;*/
+  left:-10px;
+  position:absolute;
+  top:0px;
+  bottom:0;
+  border-left:3px solid
+}
+
+
+/* make the li twice too high*/
+.treeview li {	
+  margin:0;
+  /* border: 1px solid #369;*/ /* just comment this line to see*/  
+  line-height:200%;
+  padding:0 16px;
+  font-weight:bold;
+  color:#369;  
+  position:relative; /* do I need this?*/
+}
+
+/* the tree-branche is lower than the folder-icon  */
+.treeview ul::before {
+  top:-5px;
+}
+
+/* 'closed_folder' icon for labels preceded with a not-checked checkbox */
+.treeview input:checked + label {  
+  background-color: pink; /* just to see the background of the considered element*/
+  background-position-y: top 5px; /* 5 pixel above to set it close to the label*/
+}
+
+/* 'closed_folder' icon for labels preceded with a not-checked checkbox */
+.treeview input:not(:checked)+ label {
+  background-color: pink; /* just to see the background of the considered element*/
+  background-position-y: top 5px; /* 5 pixel above to set it close to the label*/
+}
+
+
+/* add an horizontal branch : for every li*/
+.treeview ul li::before {
+  content:"";  
+  display:block;
+  width:24px; /* it is very important to set the width^*/  /* compare with the .treeview li padding:0 16px;*/
+  height:0;
+  border-top:3px solid;
+  margin-top:-1px;
+  position:absolute;
+  top:1em;
+  left:-10px
+}
+
+.treeview ul li:last-child:before {
+  background:#fff;
+  height:auto;  
+  bottom:0
+}
+
+/* make the check-box inivisible */
+.treeview input { 
+  opacity: 0.0; /* hide the check-boxes */
+}
+
+/* let more space between a label and the preceding input */
+.treeview input + label  +ul{
+	margin: 0 0 0 25px; /* top rigth bottom left */
+}
+
