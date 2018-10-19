@@ -1,30 +1,18 @@
-.treeview ul
-, .treeview li {
+.treeview ul /*, .treeview li */ {
   padding: 0;
   margin: 0 0 0 16px;
-  list-style: none;
-  position:relative;
+  list-style-type: none;
+	position:relative;
 }
 
 /* hide all ul inside any input: close all lists*/
 .treeview input ~ ul {
-  display: none;
-}
+	display: none; 
+} 
 
 /* show all ul contained in a checked checkbox */
 .treeview input:checked ~ ul {
-  display: block;
-}
-
-/* let more space between a label and the preceding input */
-.treeview input + label {
-	margin: 0 0 0 15px; /* top rigth bottom left */
-}
-
-/* make the check-box inivisible */
-.treeview input {
-  /* position: absolute; */ /* text of check-boxes to the left */
-  opacity: 0.1; /* hide the check-boxes */
+	display: block; 
 }
 
 /* 'opened_folder' icon for labels preceded with a checked checkbox */
@@ -37,16 +25,16 @@
   background: url("../images/closed_folder.png") no-repeat;	
 }
 
-/* make the check-box inivisible */
-.treeview input {
-  position: absolute;  /* text of check-boxes to the left */
-  opacity: 0.4; /* hide the check-boxes */
-  border: 1px solid blue;
+.treeview input + label::before {
+	/* content: "";*/ /* very important: make the content empty */		
+	content: "abc"; border: 1px solid red; 
+	margin: 0 20px 0 0;  /* top right bottom left*/	
 }
 
-.treeview label::before {
-	content: "abc"; /* very important: make the content empty */		
-	border: 1px solid red;
-	margin: 0 20px 0 0;  /* top right bottom left*/	
+/* let more space between a label and the preceding input */
+.treeview input {
+	/* margin:0; */
+	position: absolute; 
+	
 }
 

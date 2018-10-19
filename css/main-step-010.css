@@ -89,7 +89,7 @@
 
 /* 'closed_folder' icon for labels preceded with a not-checked checkbox */
 .treeview input:not(:checked)+ label {
-  background-color: pink; /* just to see the background of the considered element*/
+  background-color: lightblue; /* just to see the background of the considered element*/
   background-position-y: top 5px; /* 5 pixel above to set it close to the label*/
 }
 
