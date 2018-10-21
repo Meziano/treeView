@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-	/* position:relative; */
 }
 
 /* hide all ul inside any input: close all lists*/
@@ -25,7 +24,6 @@
   background: url("../images/closed_folder.png") no-repeat;	
 }
 
-/* ========================================================= */
 .treeview input + label::before {
 	content: ""; /* very important: make the content empty */		
 	/* content: "abc"; border: 1px solid red; */

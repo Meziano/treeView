@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0 0 0 16px;
   list-style-type: none;
-	position:relative;
 }
 
 /* hide all ul inside any input: close all lists*/
@@ -26,15 +25,21 @@
 }
 
 .treeview input + label::before {
-	/* content: "";*/ /* very important: make the content empty */		
-	content: "abc"; border: 1px solid red; 
+	content: "";  /* very important: make the content empty */		
+	/* content: "ab"; border: 1px solid red; */
 	margin: 0 20px 0 0;  /* top right bottom left*/	
 }
 
-/* let more space between a label and the preceding input */
-.treeview input {
-	/* margin:0; */
-	position: absolute; 
-	
+.treeview {
+  /*position:relative; */
+}
+
+
+.treeview input {	
+	position:relative;
+	margin:0;    
+    width: 16px;    
+	height:16px;
+	opacity: 1; 
 }
 
