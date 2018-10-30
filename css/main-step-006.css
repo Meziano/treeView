@@ -1,5 +1,7 @@
 .treeview ul /*, .treeview li */ {
   list-style-type: none;
+	padding: 0;
+  margin: 0 0 0 16px;
 	/* position:relative; */
 }
 
@@ -36,6 +38,39 @@
 	left:17px;
 	width: 16px;
 	height:16px;
-	opacity:0;
+	opacity:1;
 }
+
+.treeview ul {
+	position:relative;
+}
+
+.treeview ul::before {
+  content:"";
+  position:absolute;  
+	top:0;
+	left:0px;
+  bottom:0;
+  border-left:3px solid red;	
+}
+
+.treeview li::before {
+  content:"";    
+  width:16px; /* it is very important to set the width^*/  /* compare with the .treeview li padding:0 16px;*/
+  height:0;
+  border-top:3px solid;
+  margin-top:8px;
+  position:absolute;
+  left: 0px;
+  
+}
+
+
+/*
+.treeview li {
+ padding:0 0 0 10px; 
+	border-left:1px solid blue;
+	border-top:1px solid green;
+}
+*/
 

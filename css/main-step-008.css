@@ -67,7 +67,7 @@
 /* make the li twice too high*/
 .treeview li {	
   margin:0;
-  border: 1px solid #369; /* just comment this line to see*/  
+  border: 1px solid red; /* just comment this line to see*/  
   line-height:200%;
   padding:0 16px;
   font-weight:bold;
