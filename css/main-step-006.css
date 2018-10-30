@@ -1,7 +1,6 @@
 .treeview ul /*, .treeview li */ {
-  padding: 0;
-  margin: 0 0 0 16px;
   list-style-type: none;
+	/* position:relative; */
 }
 
 /* hide all ul inside any input: close all lists*/
@@ -25,21 +24,18 @@
 }
 
 .treeview input + label::before {
-	content: "";  /* very important: make the content empty */		
-	/* content: "ab"; border: 1px solid red; */
+	content: ""; /* very important: make the content empty */		
+	/* content: "abc"; border: 1px solid red; */
 	margin: 0 20px 0 0;  /* top right bottom left*/	
 }
 
-.treeview {
-  /*position:relative; */
-}
-
-
-.treeview input {	
-	position:relative;
-	margin:0;    
-    width: 16px;    
+.treeview input {
+  position: relative;
+	margin:0;
+	top: 2px;
+	left:17px;
+	width: 16px;
 	height:16px;
-	opacity: 1; 
+	opacity:0;
 }
 
