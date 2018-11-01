@@ -29,14 +29,14 @@
 	margin: 0 20px 0 0;  /* top right bottom left*/	
 }
 
+.treeview li {
+	position: relative;
+}
 .treeview input {
-  position: relative;
+	position: absolute;
 	margin:0;
-	top: 2px;
-	left:17px;
-	width: 16px;
+  top:1px;	
+  width: 16px;
 	height:16px;
 	opacity:0;
 }
-
-

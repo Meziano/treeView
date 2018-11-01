@@ -16,17 +16,6 @@
   display: block;
 }
 
-/* let more space between a label and the preceding input */
-.treeview input + label {
-	margin: 0 0 0 15px; /* top rigth bottom left */
-}
-
-/* make the check-box inivisible */
-.treeview input {
-  /* position: absolute; */ /* text of check-boxes to the left */
-  opacity: 0.1; /* hide the check-boxes */
-}
-
 /* 'opened_folder' icon for labels preceded with a checked checkbox */
 .treeview input:checked + label {
   background: url("../images/opened_folder.png") no-repeat;	
@@ -38,6 +27,12 @@
   background-color: pink;
   background-position-y: top 5px;
 }
+
+/* let more space between a label and the preceding input */
+.treeview input + label {
+	/* margin: 0 0 0 15px; */ /* top rigth bottom left */
+}
+
 
 /* make the check-box inivisible */
 .treeview input {
@@ -74,7 +69,7 @@
   font-weight:bold;
   color:#369;
   
-  position:relative; /* do i nee this?*/
+  position:relative; /* do i need this?*/
 }
 
 /* the tree-branche is lower than the folder-icon  */

@@ -1,7 +1,6 @@
 .treeview ul /*, .treeview li */ {
   list-style-type: none;
-	padding: 0;
-  margin: 0 0 0 16px;
+	
 	/* position:relative; */
 }
 
@@ -38,7 +37,7 @@
 	left:17px;
 	width: 16px;
 	height:16px;
-	opacity:1;
+	opacity:0;
 }
 
 .treeview ul {
@@ -49,7 +48,7 @@
   content:"";
   position:absolute;  
 	top:0;
-	left:0px;
+	left:20px;
   bottom:0;
   border-left:3px solid red;	
 }
@@ -61,7 +60,7 @@
   border-top:3px solid;
   margin-top:8px;
   position:absolute;
-  left: 0px;
+  left: 20px;
   
 }
 

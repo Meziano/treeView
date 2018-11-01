@@ -23,8 +23,7 @@
 }
 
 .treeview input + label::before {
-	content: ""; /* very important: make the content empty */		
-	/* content: "abc"; border: 1px solid red; */
+	content: "";  /* very important: make the content empty */	
 	margin: 0 20px 0 0;  /* top right bottom left*/	
 }
 
